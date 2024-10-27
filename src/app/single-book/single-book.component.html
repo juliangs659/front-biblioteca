@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Libro</title>
+</head>
+<body>
+    <!-- PREVISUALIZAR PDF -->
+    <div class="content-preview-pdf">
+        <div class="container">
+            <div class="bg-pdf-preview">
+                <iframe id="pdf" src="documentos\dot-net-framework-es.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="bg-button-download d-flex justify-content-center">
+                <button type="button" class="btn btn-dark p-3 mb-3"><i class="fa-regular fa-circle-down"></i> Descargar Libro</button>
+            </div>
+        </div>
+    </div>
+    <!-- PREVISUALIZAR PDF -->
+    <!-- INFORMACION BASICA DEL LIBRO -->
+     <div class="content-info-basica">
+        <div class="container">
+            <h1>Titulo del libro</h1>
+            <ul>
+                <li>Ana Samanta</li>
+                <li>Andres Garcia</li>
+                <li>Otro Autor</li>
+            </ul>
+            <a href="#"><span class="badge rounded-pill bg-secondary p-2">CATEGORIA</span></a>
+            <hr>
+        </div>
+     </div>
+    <!-- INFORMACION BASICA DEL LIBRO -->
+    <!-- PALABRAS CLAVE DEL LIBRO -->
+    <div class="content-palabras-clave">
+        <div class="container">
+            <h4>Palabras clave</h4>
+            <ul>
+                <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a></li>
+                <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a></li>
+                <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a></li>
+                <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a></li>
+                <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a></li>
+                <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a></li>
+            </ul>
+            <hr>
+        </div>
+    </div>
+    <!-- PALABRAS CLAVE DEL LIBRO -->
+    <!-- COMENTARIOS DEL LIBRO -->
+     <div class="content-comentarios">
+        <div class="container">
+            <h4 >Comentarios</h4 >
+            <ul>
+                <li>
+                    <div class="row">
+                        <div class="col-1"><img src="img/gravatar.png" alt=""></div>
+                        <div class="col-8">
+                            <div class="nombre-lista-star">
+                                <p>Nombre</p>
+                                <ul>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, soluta, consectetur deserunt eos aperiam perferendis dolorem</p>
+                        </div>
+                        <button type="button" class="btn" id="btn-ver-mas">Ver más comentarios...</button>
+                    </div>
+                </li>
+            </ul>
+            <form>
+                <textarea placeholder="Escribe tu comentario aqui..." class="form-control"></textarea>
+                <span class="califica-libro mt-2" for="rating">Califica el libro</span>
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5" class="fa-regular fa-star"></label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4" class="fa-regular fa-star"></label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3" class="fa-regular fa-star"></label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2" class="fa-regular fa-star"></label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1" class="fa-regular fa-star"></label>
+                </div>
+                <button class="btn btn-dark mt-2" type="button"><i class="fa-solid fa-paper-plane"></i> Enviar Comentario</button>
+            </form>
+        </div>
+     </div>
+    <!-- COMENTARIOS DEL LIBRO -->
+    <!-- LIBROS SIMILARES -->
+     <div class="content-libros-similares">
+        <div class="container">
+            <hr>
+            <h4>Libros similares</h4>
+            <div id="carouselExample" class="carousel slide carousel-dark">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <!-- ITEM 1-->
+                    <div class="d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <div class="img-bg">
+                                <img src="img/headerEjemplo.jpg" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ITEM 1-->
+                  </div>
+                  <div class="carousel-item">
+                    
+                  </div>
+                  <div class="carousel-item">
+                    
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+     </div>
+     
+    <!-- LIBROS SIMILARES -->    
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Biblioteca Digital</title>
+</head>
+<body>
+  <!-- HEADER -->
+    <div id="carouselExample" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Primer elemento del carrusel -->
+          <div class="carousel-item active">
+            <div class="container">
+                <div class="row pt-5 pb-5">
+                    <div class="col-12 col-sm-6 content-info-left d-flex flex-column justify-content-center">
+                        <div class="content">
+                          <h3>Nombre del Autor</h3>
+                          <h2>Titulo del libro mas extenso</h2>
+                          <a href="#" class="btn btn btn-outline" id="btn-leermas">LEER MAS</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 p-4 content-info-right">
+                        <a href="#" class="img-right-header"><img src="img/headerEjemplo.jpg" alt="Imagen header"></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- Segundo elemento del carrusel -->
+          <div class="carousel-item active">
+            <div class="container">
+                <div class="row pt-5 pb-5">
+                    <div class="col-12 col-sm-6 content-info-left d-flex flex-column justify-content-center">
+                        <div class="content">
+                          <h3>Nombre del Autor</h3>
+                          <h2>Titulo del libro mas extenso</h2>
+                          <a href="#" class="btn btn btn-outline" id="btn-leermas">LEER MAS</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 p-4 content-info-right">
+                        <a href="#" class="img-right-header"><img src="img/headerEjemplo.jpg" alt="Imagen header"></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!-- HEADER -->
+
+    <!--FILTER -->
+     <div class="content-filter mt-4">
+      <div class="container">
+        <h4>Filtros</h4>
+        <form>
+          <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar">
+          </div>
+          <p class="palabras-clave-titulo mt-2">Palabras Clave</p>
+          <ul class="content-list-palabras-clave">
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  All
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  JavaScript
+                </label>
+              </div>
+            </li>
+            <li class="">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  FrontEnd
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  BackEnd
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                 Java
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                 Spring Boot
+                </label>
+              </div>
+            </li>
+          </ul>
+        </form>
+      </div>
+     </div>
+     <!--FILTER-->
+     <!--LIST BOOKS-->
+    <div class="content-list-books">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col item-card-bg">
+            <a href="#"><span class="categoria-book">BACK END</span></a>
+            <div class="card">
+              <div class="img-bg">
+                <img src="img/headerEjemplo.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Introducció a java</h5>
+                <div class="container-autores">
+                  <p>Por:</p>
+                  <ul class="list-autores-book">
+                    <li>Ana Garcia - </li>
+                    <li>Sebastian Mendoza </li>
+                  </ul>
+                </div>
+                <div class="container-tags">
+                  <ul>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">JAVA</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">SPRING BOOT</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">POO</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">SPRING</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">MVC</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">JPA</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">BASES DE DATOS</span></a></li>
+                  </ul>
+                </div>
+                <button class="btn btn-dark pt-2 pb-2 w-100" id="btn-leerlibro" type="button">LEER LIBRO</button>
+              </div>
+            </div>
+          </div>
+          <div class="col item-card-bg">
+            <a href="#"><span class="categoria-book">BACK END</span></a>
+            <div class="card">
+              <div class="img-bg">
+                <img src="img/headerEjemplo.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Introducció a java</h5>
+                <div class="container-autores">
+                  <p>Por:</p>
+                  <ul class="list-autores-book">
+                    <li>Ana Garcia - </li>
+                    <li>Sebastian Mendoza </li>
+                  </ul>
+                </div>
+                <div class="container-tags">
+                  <ul>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">JAVA</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">SPRING BOOT</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">POO</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">SPRING</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">MVC</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">JPA</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">BASES DE DATOS</span></a></li>
+                  </ul>
+                </div>
+                <button class="btn btn-dark pt-2 pb-2 w-100" id="btn-leerlibro" type="button">LEER LIBRO</button>
+              </div>
+            </div>
+          </div>
+          <div class="col item-card-bg">
+            <a href="#"><span class="categoria-book">BACK END</span></a>
+            <div class="card">
+              <div class="img-bg">
+                <img src="img/headerEjemplo.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Introducció a java</h5>
+                <div class="container-autores">
+                  <p>Por:</p>
+                  <ul class="list-autores-book">
+                    <li>Ana Garcia - </li>
+                    <li>Sebastian Mendoza </li>
+                  </ul>
+                </div>
+                <div class="container-tags">
+                  <ul>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">JAVA</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">SPRING BOOT</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">POO</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">SPRING</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">MVC</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">JPA</span></a></li>
+                    <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">BASES DE DATOS</span></a></li>
+                  </ul>
+                </div>
+                <button class="btn btn-dark pt-2 pb-2 w-100" id="btn-leerlibro" type="button">LEER LIBRO</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- LISTA DE LIBROS -->
+    <!-- PAGINACION -->
+     <div class="content-paginacion">
+      <div class="container d-flex justify-content-center mt-5">
+        <nav aria-label="Page navigation example pagination-lg">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+          </ul>
+        </nav>
+      </div>
+     </div>
+    <!-- PAGINACION -->
+</body>
+</html>

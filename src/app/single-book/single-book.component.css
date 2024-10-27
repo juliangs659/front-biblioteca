@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    font-family: 'Montserrat';
+}
+
+.content-preview-pdf .container{
+    border-radius: 10px;
+    border: 2px solid #00000015;
+    margin-top: 30px;
+}
+
+.content-preview-pdf .bg-pdf-preview #pdf{
+    width: 100%;
+    height: 1200px;
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+
+/* modificando contenido informacion basica*/
+.content-info-basica h1{
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.content-info-basica ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    list-style: none;
+    padding: 0px;
+}
+
+.content-info-basica ul li{
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* modificando las palabras clave*/
+.content-palabras-clave h4{
+    font-weight: 600;
+}
+
+.content-palabras-clave ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+}
+
+.content-palabras-clave ul li{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+/* modificanco los comentarios*/
+.content-comentarios h4{
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.content-comentarios ul{
+    display: flex;
+    list-style: none;
+    padding: 0px;
+}
+
+.content-comentarios img{
+    width: 50px;
+    border: 1px solid #00000043;
+    border-radius: 50px;
+}
+
+.content-comentarios .nombre-lista-star{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0px;
+}
+
+.content-comentarios .nombre-lista-star ul{
+    margin-left: 10px;
+    color: #FACC14;
+}
+
+.content-comentarios .nombre-lista-star p{
+    font-weight: 700;
+}
+
+.content-comentarios #btn-ver-mas{
+    background: transparent;
+    border: transparent;
+    margin-top: 10px;
+}
+
+.content-comentarios #btn-ver-mas:hover{
+    color: #000000a4;
+}
+
+.content-comentarios form textarea{
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.content-comentarios form .califica-libro{
+    font-weight: 600;
+}
+
+.content-comentarios form .star-rating input{
+    display: none;
+}
+
+.content-comentarios form .star-rating label{
+    margin-right: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/*Libros siminales*/
+.content-libros-similares{
+    margin-top: 30px;
+}
+
+.content-libros-similares h4{
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.content-libros-similares .card img{
+    width: 50%;
+    padding: 25px 0px 0px 0px;
+}
+
+.content-libros-similares .card .img-bg{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #F5F5F5;
+}
+
+.content-libros-similares .card .card-title{
+    font-weight: 600;
+}

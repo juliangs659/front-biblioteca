@@ -1,0 +1,208 @@
+.carousel-item{
+    background: #E4E4E4;
+}
+
+/** estilos generales de la informacion izquierda del carousel*/
+
+.content-info-left h3{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.content-info-left h2{
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+.content-info-left #btn-leermas{
+    color: #242020;
+    padding: 0.9rem 3.5rem;
+    border-color: #242020;
+    border-width: 2px;
+    font-family: 'Roboto';
+}
+
+.content-info-left #btn-leermas:hover{
+    color: #e7e7e7;
+    padding: 0.9rem 3.5rem;
+    border-color: #242020;
+    border-width: 2px;
+    background-color: #242020;
+}
+
+/*modificando el contenido general de la derecha*/
+.content-info-right a img{
+    width: 60%;
+    height: auto;
+    margin: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 6px #2420205d;
+}
+
+.content-info-right a img:hover{
+    box-shadow: 0px 0px 15px 0px #24202067;
+    border-color: aqua;
+    transition: all 100ms;
+}
+
+.content-info-right{
+   text-align: center;
+}
+
+/* modificando los botones del carousel*/
+.carousel-control-next, .carousel-control-prev {
+    display: flex; /* Utiliza Flexbox */
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: flex-end; /* Alinea los elementos al final (parte inferior) */
+    margin-bottom: 30px;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    width: 6%;
+}
+
+/*estilos del filtro*/
+.content-filter h4{
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.content-filter form .input-group .input-group-prepend{
+    background-color: red;
+}
+
+.content-filter form .input-group .input-group-prepend .input-group-text{
+    height: 100%;
+    border-radius: 0px;
+    background-color: #E4E4E4;
+    color: #898989;
+    padding-left: 20px;
+}
+
+.content-filter form .input-group .input-group-prepend .input-group-text i{
+    font-size: 1.2rem;
+}
+
+.content-filter .form-control{
+    background-color: #E4E4E4;
+    color: #898989;
+    padding: 9px;
+    border-radius: 0px;
+    font-family: 'Roboto';
+}
+
+.content-filter .form-control:focus{
+    border: transparent;
+    box-shadow: none;
+    outline: none; /* Elimina el contorno azul que aparece al enfocar */
+    padding: 10px;
+}
+
+.content-filter .palabras-clave-titulo{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.content-filter .content-list-palabras-clave{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.content-filter .content-list-palabras-clave li{
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+
+/*Estilos lista de libros*/
+.content-list-books .item-card-bg .card{
+    box-shadow: 0px 0px 10px #24202029;
+    border-color: transparent;
+}
+
+.content-list-books .img-bg{
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+}
+
+.content-list-books .img-bg img{
+    width: 45%;
+    margin-top: 10%;
+}
+
+.content-list-books .container-autores{
+    display: flex;
+    height: 33px;
+}
+
+.content-list-books .list-autores-book{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.content-list-books .list-autores-book li{
+    margin-right: 4px;
+}
+
+.content-list-books .item-card-bg .card-title{
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.content-list-books .item-card-bg .container-autores p, .content-list-books .item-card-bg .container-autores .list-autores-book{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.content-list-books .item-card-bg .container-tags ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.content-list-books .item-card-bg .container-tags ul li{
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.content-list-books .item-card-bg #btn-leerlibro{
+    font-family: "Roboto";
+}
+
+.content-list-books .item-card-bg{
+    position: relative;
+}
+
+.content-list-books .item-card-bg .categoria-book{
+    position: absolute;
+    z-index: 1;
+    background-color: #2ECC71;
+    color: #fff;
+    font-family: "Roboto";
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* estilos de la paginacion*/
+.content-paginacion .page-item .page-link{
+    color: #242020;
+    padding: 15px 20px;
+}
+
+
