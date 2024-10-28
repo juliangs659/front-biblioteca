@@ -1,0 +1,40 @@
+<div class="container mt-3 ">
+  <h2 class="text-center mb-4">Registro de Usuario</h2>
+  <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+    <div class="form-group mb-2">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" formControlName="nombre" id="nombre" placeholder="Ingrese su nombre">
+    </div>
+    <div class="form-group mb-3">
+      <label for="username">Nombre de usuario</label>
+      <input type="text" class="form-control" formControlName="username" id="username" placeholder="Ingrese su nombre de usuario">
+    </div>
+    <div class="form-group mb-3">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" formControlName="email" id="email" placeholder="Ingrese su correo electrónico">
+    </div>
+    <div class="form-group mb-3">
+      <label for="pass">Contraseña</label>
+      <input type="password" class="form-control" formControlName="pass" id="pass" placeholder="Ingrese su contraseña">
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="avatar">Avatar</label>
+      <div class="row text-center">
+        <div class="col-2 col-md-1" *ngFor="let avatar of avatars">
+          <img
+            [src]="construirUrlAvatar(avatar)"
+            (click)="selectAvatar(avatar)"
+            class="img-thumbnail mb-2"
+            [class.selected-avatar]="selectedAvatar === avatar"
+            [attr.alt]="avatar"
+            style="width: 80px; height: 80px; cursor: pointer;"
+          />
+          
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Registrar</button>
+  </form>
+</div>

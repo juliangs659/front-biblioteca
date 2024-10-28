@@ -1,0 +1,24 @@
+.card {
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+  height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+.img-bg {
+  flex: 0 0 auto; /* La imagen no se expandirá más allá de su contenido */
+  height: 150px; /* Ajusta este valor según el tamaño que desees */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+.card-img-top {
+  width: 100%; /* Asegura que la imagen llene el contenedor */
+  height: 100%; /* Asegura que la imagen tenga la altura correcta */
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarse */
+}
+
+.card-body {
+  flex: 1 0 auto; /* Permite que el contenido restante se expanda */
+  display: flex; /* Hacer que el cuerpo de la tarjeta use flexbox */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  justify-content: space-between; /* Distribuye el espacio entre el contenido y el botón */
+}
