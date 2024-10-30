@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
       <ng-container *ngIf="Libros.length > 0; else noData">
-        <div class="col item-card-bg" *ngFor="let libro of Libros">
+        <div class="col item-card-bg" *ngFor="let libro of Libros; let i = index">
           <div class="card" style="width: 100%;">
             <div class="img-bg">
-              <img [src]="" class="card-img-top" alt="Portada del libro">
+              <img src="https://www.brandemia.org/wp-content/uploads/2012/10/logo_principal.jpg" class="card-img-top" alt="Portada del libro">
             </div>
             <div class="card-body">
               <h5 class="card-title">{{ libro.titulo }}</h5>
@@ -17,15 +17,6 @@
               </div>
               <p class="card-text">{{ libro.categoria.descripcion }}</p>
               <a [href]="libro.referenciaPdf" class="btn btn-dark pt-2 pb-2 w-100" id="btn-leerlibro" target="_blank" rel="noopener noreferrer">LEER LIBRO</a>
-            </div>
-          </div>
-        </div>
-        <div *ngFor="let libro of Libros">
-          <div class="card">
-            <img [src]="" class="card-img-top" alt="Portada del libro">
-            <div class="card-body">
-              <h5 class="card-title">{{ libro.titulo }}</h5>
-              <p class="card-text">{{ libro.categoria.descripcion }}</p>
             </div>
           </div>
         </div>

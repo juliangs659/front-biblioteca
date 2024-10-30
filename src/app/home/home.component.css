@@ -204,5 +204,15 @@
     color: #242020;
     padding: 15px 20px;
 }
+.libros-filtrados{
+    margin: auto 20%;
+}
+
+.libros-filtrados .card {
+    border: 1px solid #e0e0e0; /* Borde suave */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
 
 
