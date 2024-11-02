@@ -22,3 +22,34 @@
   flex-direction: column; /* Apila los elementos verticalmente */
   justify-content: space-between; /* Distribuye el espacio entre el contenido y el botón */
 }
+.search-input {
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  padding: 10px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.category-select {
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  padding: 10px;
+  transition: border-color 0.3s;
+}
+
+.category-select:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.item-card-bg {
+  transition: transform 0.3s;
+}
+
+.item-card-bg:hover {
+  transform: scale(1.05);
+}

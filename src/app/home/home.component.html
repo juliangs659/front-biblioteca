@@ -6,56 +6,40 @@
     <title>Home Biblioteca Digital</title>
 </head>
 <body>
-  <!-- HEADER -->
-    <div id="carouselExample" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <!-- Primer elemento del carrusel -->
-          <div class="carousel-item active">
-            <div class="container">
-                <div class="row pt-5 pb-5">
-                    <div class="col-12 col-sm-6 content-info-left d-flex flex-column justify-content-center">
-                        <div class="content">
-                          <h3>Nombre del Autor</h3>
-                          <h2>Titulo del libro mas extenso</h2>
-                          <a href="#" class="btn btn btn-outline" id="btn-leermas">LEER MAS</a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 p-4 content-info-right">
-                        <a href="#" class="img-right-header"><img src="img/headerEjemplo.jpg" alt="Imagen header"></a>
-                    </div>
-                </div>
+ <!-- HEADER -->
+<div id="carouselExample" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" *ngIf="libroAleatorio">
+      <div class="container">
+        <div class="row pt-5 pb-5">
+          <div class="col-12 col-sm-6 content-info-left d-flex flex-column justify-content-center">
+            <div class="content">
+              <h3>{{ libroAleatorio.autor.nombreAutor }}</h3>
+              <h2>{{ libroAleatorio.titulo }}</h2>
+              <a [href]="libroAleatorio.referenciaPdf" class="btn btn-outline" id="btn-leermas" target="_blank" rel="noopener noreferrer">LEER MÁS</a>
             </div>
           </div>
-          <!-- Segundo elemento del carrusel -->
-          <div class="carousel-item active">
-            <div class="container">
-                <div class="row pt-5 pb-5">
-                    <div class="col-12 col-sm-6 content-info-left d-flex flex-column justify-content-center">
-                        <div class="content">
-                          <h3>Nombre del Autor</h3>
-                          <h2>Titulo del libro mas extenso</h2>
-                          <a href="#" class="btn btn btn-outline" id="btn-leermas">LEER MAS</a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 p-4 content-info-right">
-                        <a href="#" class="img-right-header"><img src="img/headerEjemplo.jpg" alt="Imagen header"></a>
-                    </div>
-                </div>
-            </div>
+          <div class="col-12 col-sm-6 p-4 content-info-right">
+            <a href="#" class="img-right-header">
+              <img [src]="getCategoryImage(libroAleatorio.categoria.nombreCategoria)" alt="Imagen del libro {{ libroAleatorio.titulo }}" />
+            </a>
           </div>
-
         </div>
-        <!-- Controles del carrusel -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-    <!-- HEADER -->
+    </div>
+  </div>
+  <!-- Controles del carrusel -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" disabled>
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" disabled>
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- HEADER -->
+
 <!-- FILTER -->
 <div class="content-filter mt-4">
   <div class="container">
@@ -95,7 +79,7 @@
       <div class="card h-100"> <!-- h-100 para que todas las tarjetas ocupen el mismo alto -->
         <div class="img-bg">
           <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/512px-Angular_full_color_logo.svg.png" 
+          [src]="getCategoryImage(item.categoria.nombreCategoria)" 
             class="card-img-top img-fluid" 
             alt="Imagen de la categoría" 
             style="height: 150px; object-fit: cover;"
@@ -117,22 +101,6 @@
     </div>
   </div>
 </div>
-    <!-- PAGINACION -->
-     <div class="content-paginacion">
-      <div class="container d-flex justify-content-center mt-5">
-        <nav aria-label="Page navigation example pagination-lg">
-          <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-
-            <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
-          </ul>
-        </nav>
-      </div>
-     </div>
-    <!-- PAGINACION -->
+    
 </body>
 </html>

@@ -5,11 +5,13 @@ import { AdminComponent } from './componentes/admin/admin.component';
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { LibrosComponent } from './componentes/libros/libros.component';
+import AuthSigninComponent from './componentes/auth-signin/auth-signin.component';
 
 export const routes: Routes = [
     {path: "", component: HomeComponent},
     {path:"book", component:SingleBookComponent},
-    {path:"admin", component: LibrosComponent},
+    {path:"libros", component: LibrosComponent},
     {path:"usuarios", component: UsuariosComponent},
-    {path:"registro", component: RegistroComponent}
+    {path:"registro", component: RegistroComponent},
+    {path:"login", component: AuthSigninComponent}
 ];

@@ -1,6 +1,7 @@
 // src/app/models/libro.model.ts
 
 export interface Libro {
+  imagen: string; // Puedes cambiar el tipo de dato según tus necesidades
   idLibro: number;
   titulo: string;
   referenciaPdf: string;

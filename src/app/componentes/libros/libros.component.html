@@ -1,11 +1,40 @@
+
 <div class="content-list-books">
   <div class="container">
+    <div class="row">
+      <div class="col-12 mb-3">
+        <input 
+          type="text" 
+          [(ngModel)]="searchText" 
+          (input)="searchBooks()" 
+          placeholder="Buscar por título o autor" 
+          class="form-control search-input"
+        />
+      </div>
+      <div class="col-12 mb-3">
+        <select 
+          [(ngModel)]="selectedCategory" 
+          (change)="searchBooks()" 
+          class="form-select category-select"
+        >
+          <option value="">Todas las categorías</option>
+          <option *ngFor="let category of categorias" [value]="category">{{ category }}</option>
+        </select>
+      </div>
+      
+    </div>
+    
     <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
-      <ng-container *ngIf="Libros.length > 0; else noData">
-        <div class="col item-card-bg" *ngFor="let libro of Libros; let i = index">
-          <div class="card" style="width: 100%;">
+      <ng-container *ngIf="filteredLibros.length > 0; else noData">
+        <div class="col item-card-bg" *ngFor="let libro of filteredLibros">
+          <div class="card h-100">
             <div class="img-bg">
-              <img src="https://www.brandemia.org/wp-content/uploads/2012/10/logo_principal.jpg" class="card-img-top" alt="Portada del libro">
+              <img 
+                [src]="getCategoryImage(libro.categoria.nombreCategoria)" 
+                class="card-img-top" 
+                alt="Portada del libro {{ libro.titulo }}" 
+                style="height: 150px; object-fit: cover;"
+              />
             </div>
             <div class="card-body">
               <h5 class="card-title">{{ libro.titulo }}</h5>
@@ -16,7 +45,14 @@
                 </ul>
               </div>
               <p class="card-text">{{ libro.categoria.descripcion }}</p>
-              <a [href]="libro.referenciaPdf" class="btn btn-dark pt-2 pb-2 w-100" id="btn-leerlibro" target="_blank" rel="noopener noreferrer">LEER LIBRO</a>
+              <a 
+                [href]="libro.referenciaPdf" 
+                class="btn btn-dark w-100" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                LEER LIBRO
+              </a>
             </div>
           </div>
         </div>
