@@ -7,17 +7,20 @@
 </head>
 <body>
     <!-- PREVISUALIZAR PDF -->
-    <div class="content-preview-pdf">
-        <div class="container">
-            <div class="bg-pdf-preview">
-                <iframe id="pdf" src="documentos\dot-net-framework-es.pdf" frameborder="0"></iframe>
-            </div>
-            <div class="bg-button-download d-flex justify-content-center">
-                <button type="button" class="btn btn-dark p-3 mb-3"><i class="fa-regular fa-circle-down"></i> Descargar Libro</button>
-            </div>
+<!-- PREVISUALIZAR PDF -->
+<div class="content-preview-pdf" *ngIf="pdfUrl">
+    <div class="container">
+        <div class="bg-pdf-preview">
+            <iframe id="pdf" [src]="pdfUrl | safeUrl" frameborder="0"></iframe>
+        </div>
+        <div class="bg-button-download d-flex justify-content-center">
+            <a [href]="pdfUrl" download class="btn btn-dark p-3 mb-3">
+                <i class="fa-regular fa-circle-down"></i> Descargar Libro
+            </a>
         </div>
     </div>
-    <!-- PREVISUALIZAR PDF -->
+</div>
+<!-- PREVISUALIZAR PDF -->
     <!-- INFORMACION BASICA DEL LIBRO -->
      <div class="content-info-basica">
         <div class="container">
@@ -32,22 +35,7 @@
         </div>
      </div>
     <!-- INFORMACION BASICA DEL LIBRO -->
-    <!-- PALABRAS CLAVE DEL LIBRO -->
-    <div class="content-palabras-clave">
-        <div class="container">
-            <h4>Palabras clave</h4>
-            <ul>
-                <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a></li>
-                <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a></li>
-                <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a></li>
-                <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a></li>
-                <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a></li>
-                <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a></li>
-            </ul>
-            <hr>
-        </div>
-    </div>
-    <!-- PALABRAS CLAVE DEL LIBRO -->
+
     <!-- COMENTARIOS DEL LIBRO -->
      <div class="content-comentarios">
         <div class="container">
@@ -88,47 +76,6 @@
         </div>
      </div>
     <!-- COMENTARIOS DEL LIBRO -->
-    <!-- LIBROS SIMILARES -->
-     <div class="content-libros-similares">
-        <div class="container">
-            <hr>
-            <h4>Libros similares</h4>
-            <div id="carouselExample" class="carousel slide carousel-dark">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <!-- ITEM 1-->
-                    <div class="d-flex justify-content-center">
-                        <div class="card" style="width: 18rem;">
-                            <div class="img-bg">
-                                <img src="img/headerEjemplo.jpg" class="card-img-top" alt="...">
-                            </div>
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <a href="#"><span class="badge rounded-pill bg-secondary p-2">PALABRA CLAVE</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ITEM 1-->
-                  </div>
-                  <div class="carousel-item">
-                    
-                  </div>
-                  <div class="carousel-item">
-                    
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </div>
-     </div>
-     
-    <!-- LIBROS SIMILARES -->    
+   
 </body>
 </html>

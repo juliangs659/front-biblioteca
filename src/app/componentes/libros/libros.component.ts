@@ -3,11 +3,12 @@ import { Libro } from '../../models/libro.model';
 import { LibrosService } from '../../servicios/libros.service';
 import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-libros',
   standalone: true,
-  imports: [NgFor, NgIf, FormsModule],
+  imports: [NgFor, NgIf, FormsModule, RouterLink],
   templateUrl: './libros.component.html',
   styleUrls: ['./libros.component.css']
 })

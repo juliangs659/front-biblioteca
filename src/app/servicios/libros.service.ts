@@ -66,4 +66,8 @@ export class LibrosService {
   getCategoryImageMap(): { [key: string]: string } {
     return this.categoryImageMap;
   }
+
+  getLibroById(id: string): Observable<Libro> {
+    return this.http.get<Libro>(`${this.apiUrl}/${id}`);
+  }
 }
