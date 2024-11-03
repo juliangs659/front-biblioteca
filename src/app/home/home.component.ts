@@ -2,25 +2,35 @@ import { NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { LibrosService } from '../servicios/libros.service';
 import { Libro } from '../models/libro.model';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, RouterLink],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
   Libros: Libro[] = [];
+  libro: Libro | undefined;
   librosFiltrados: Libro[] = []; // Propiedad para almacenar libros filtrados
   categorias: string[] = []; // Propiedad para almacenar categorías únicas
   categoriasSeleccionadas: string[] = []; // Almacena las categorías seleccionadas
   libroAleatorio!: Libro; // Propiedad para almacenar un libro aleatorio
+  pdfUrl: string = '';
 
-  constructor(private libroService: LibrosService) {}
+  constructor(private route: ActivatedRoute,
+     private libroService: LibrosService) {}
 
   ngOnInit(): void {
     this.getLibros();
+    this.route.paramMap.subscribe(params => {
+      const idLibro = params.get('idLibro');
+      if (idLibro) {
+        this.getLibro(idLibro);
+      }
+    });
   }
 
   getLibros(): void {
@@ -30,11 +40,18 @@ export class HomeComponent implements OnInit {
         this.extraerCategorias(data);
         // this.librosFiltrados = data; // Inicialmente, todos los libros están filtrados
         this.seleccionarLibroAleatorio(); // Selecciona un libro aleatorio al cargar la página
+        
       },
       error => {
         console.error('Error al obtener los libros:', error);
       }
     );
+  }
+  getLibro(idLibro: string) {
+    this.libroService.getLibroById(idLibro).subscribe(data => {
+      this.libro = data;
+      this.pdfUrl = this.libro.referenciaPdf;
+    });
   }
 
   extraerCategorias(data: Libro[]): void {

@@ -16,7 +16,7 @@
             <div class="content">
               <h3>{{ libroAleatorio.autor.nombreAutor }}</h3>
               <h2>{{ libroAleatorio.titulo }}</h2>
-              <a [href]="libroAleatorio.referenciaPdf" class="btn btn-outline" id="btn-leermas" target="_blank" rel="noopener noreferrer">LEER MÁS</a>
+              <a [routerLink]="['/leer', libroAleatorio.idLibro]" class="btn btn-outline" id="btn-leermas" target="_blank" rel="noopener noreferrer">LEER MÁS</a>
             </div>
           </div>
           <div class="col-12 col-sm-6 p-4 content-info-right">
@@ -95,7 +95,7 @@
               <li><a href="#"><span class="badge rounded-pill bg-secondary p-2">{{ item.categoria.nombreCategoria }}</span></a></li>
             </ul>
           </div>
-          <a href="{{ item.referenciaPdf }}" class="btn btn-primary mt-auto" target="_blank">Ver PDF</a> <!-- mt-auto para empujar el botón hacia abajo -->
+          <a [routerLink]="['/leer', item.idLibro]" class="btn btn-primary mt-auto" target="_blank">Ver PDF</a> <!-- mt-auto para empujar el botón hacia abajo -->
         </div>
       </div>
     </div>

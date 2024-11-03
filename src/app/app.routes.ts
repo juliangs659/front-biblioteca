@@ -4,7 +4,7 @@ import { SingleBookComponent } from './single-book/single-book.component';
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { LibrosComponent } from './componentes/libros/libros.component';
-import AuthSigninComponent from './componentes/auth-signin/auth-signin.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 export const routes: Routes = [
     {path: "", component: HomeComponent},
@@ -12,7 +12,7 @@ export const routes: Routes = [
     {path:"libros", component: LibrosComponent},
     {path:"usuarios", component: UsuariosComponent},
     {path:"registro", component: RegistroComponent},
-    {path:"login", component: AuthSigninComponent},
+    {path:"login", component: LoginComponent},
     {path:"leer/:idLibro", component: SingleBookComponent}
 
 ];

@@ -7,8 +7,9 @@ export class Usuario {
   public fecha_creacion: string; 
   public avatar: string; 
   public avatarUrl?: string; // Agregamos avatarUrl como propiedad opcional
+  public pass: string;
 
-  constructor(idUsuario: number, nombre: string, username: string, email: string, rol: string, fecha_creacion: string, avatar: string) {
+  constructor(idUsuario: number, nombre: string, username: string, email: string, rol: string, fecha_creacion: string, avatar: string, pass: string) {
     this.idUsuario = idUsuario;
     this.nombre = nombre;
     this.username = username;
@@ -16,6 +17,7 @@ export class Usuario {
     this.rol = rol;
     this.fecha_creacion = fecha_creacion;
     this.avatar = avatar;
+    this.pass = pass;
   }
 
 
