@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   categoriasSeleccionadas: string[] = []; // Almacena las categorías seleccionadas
   libroAleatorio!: Libro; // Propiedad para almacenar un libro aleatorio
   pdfUrl: string = '';
+  shuffledLibros: Libro[] = [];
 
   constructor(private route: ActivatedRoute,
      private libroService: LibrosService) {}
@@ -29,8 +30,14 @@ export class HomeComponent implements OnInit {
       const idLibro = params.get('idLibro');
       if (idLibro) {
         this.getLibro(idLibro);
+    this.shuffledLibros = this.shuffleArray(this.Libros);
+
       }
     });
+  }
+
+  shuffleArray(array: any[]): any[] {
+    return array.sort(() => Math.random() - 0.5);
   }
 
   getLibros(): void {
@@ -40,7 +47,7 @@ export class HomeComponent implements OnInit {
         this.extraerCategorias(data);
         // this.librosFiltrados = data; // Inicialmente, todos los libros están filtrados
         this.seleccionarLibroAleatorio(); // Selecciona un libro aleatorio al cargar la página
-        
+        this.shuffledLibros = this.shuffleArray(this.Libros);
       },
       error => {
         console.error('Error al obtener los libros:', error);
