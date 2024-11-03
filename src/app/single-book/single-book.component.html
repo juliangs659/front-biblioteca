@@ -24,13 +24,11 @@
     <!-- INFORMACION BASICA DEL LIBRO -->
      <div class="content-info-basica">
         <div class="container">
-            <h1>Titulo del libro</h1>
+            <h1>{{libro?.titulo}}</h1>
             <ul>
-                <li>Ana Samanta</li>
-                <li>Andres Garcia</li>
-                <li>Otro Autor</li>
+                <li>{{libro?.autor?.nombreAutor}}</li>
             </ul>
-            <a href="#"><span class="badge rounded-pill bg-secondary p-2">CATEGORIA</span></a>
+            <a href="#"><span class="badge rounded-pill bg-secondary p-2">{{libro?.categoria?.nombreCategoria}}</span></a>
             <hr>
         </div>
      </div>

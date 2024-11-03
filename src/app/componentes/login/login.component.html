@@ -21,4 +21,13 @@
       <img src="https://igniteonline.la/wp-content/uploads/2020/03/BIBLIOTECAS-DIGITALES-1.png" alt="Imagen de Biblioteca Digital" class="img-fluid rounded shadow-lg">
     </div>
   </div>
+  <div *ngIf="loginSuccess" class="dropdown mt-3">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      Mi Cuenta
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" href="#">Mi Cuenta</a></li>
+      <li><a class="dropdown-item" href="#" (click)="logout()">Cerrar Sesión</a></li>
+    </ul>
+  </div>
 </div>

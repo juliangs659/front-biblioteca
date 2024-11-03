@@ -1,4 +1,4 @@
-<div>
+<div class="contenedor-big">
   <input type="text" [(ngModel)]="searchTerm" (input)="searchUsuarios()" placeholder="Buscar por ID, Username o Email" class="form-control mb-3"/>
   <table class="table table-hover">
     <thead class="table-light">
@@ -25,13 +25,53 @@
           <img [src]="construirUrlAvatar(item.avatar)" alt="Avatar" width="30" height="30">
         </td>
         <td>
-          <button class="btn btn-info btn-sm" >Ver</button>
-          <button class="btn btn-warning btn-sm" >Editar</button>
-          <button class="btn btn-danger btn-sm" >Eliminar</button>
+          <button class="btn btn-info btn-sm" (click)="verUsuario(item)">Ver</button>
+          <button class="btn btn-warning btn-sm" (click)="editarUsuario(item)">Editar</button>
+          <button class="btn btn-danger btn-sm" (click)="eliminarUsuario(item)">Eliminar</button>
         </td>
       </tr>
     </tbody>
   </table>
+
+  <div *ngIf="usuarioParaVer" class="mt-4">
+    <h3>Información del Usuario</h3>
+    <p><strong>ID:</strong> {{ usuarioParaVer.idUsuario }}</p>
+    <p><strong>Nombre:</strong> {{ usuarioParaVer.nombre }}</p>
+    <p><strong>Username:</strong> {{ usuarioParaVer.username }}</p>
+    <p><strong>Email:</strong> {{ usuarioParaVer.email }}</p>
+    <p><strong>Rol:</strong> {{ usuarioParaVer.rol }}</p>
+    <p><strong>Fecha de Registro:</strong> {{ usuarioParaVer.fecha_creacion }}</p>
+    <p><strong>Avatar:</strong> <img [src]="construirUrlAvatar(usuarioParaVer.avatar)" alt="Avatar" width="30" height="30"></p>
+    <button class="btn btn-secondary" (click)="usuarioParaVer = null">Cerrar</button>
+  </div>
+
+  <div *ngIf="usuarioSeleccionado" class="mt-4">
+    <h3>Editar Usuario</h3>
+    <form (ngSubmit)="guardarUsuario()">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" [(ngModel)]="usuarioSeleccionado.nombre" name="nombre" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" id="username" [(ngModel)]="usuarioSeleccionado.username" name="username" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" [(ngModel)]="usuarioSeleccionado.email" name="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="rol" class="form-label">Rol</label>
+        <input type="text" id="rol" [(ngModel)]="usuarioSeleccionado.rol" name="rol" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="avatar" class="form-label">Avatar</label>
+        <input type="text" id="avatar" [(ngModel)]="usuarioSeleccionado.avatar" name="avatar" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelarEdicion()">Cancelar</button>
+    </form>
+  </div>
 </div>
 
 

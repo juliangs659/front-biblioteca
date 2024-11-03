@@ -31,11 +31,11 @@ export class UsuarioService {
 
     updateUsuario(id: number, usuario: Usuario): Observable<Usuario> {
         return this.http.put<Usuario>(`${this.apiUrl}/${id}`, usuario);
-    }
-
-    deleteUsuario(id: number): Observable<void> {
+      }
+    
+      deleteUsuario(id: number): Observable<void> {
         return this.http.delete<void>(`${this.apiUrl}/${id}`);
-    }
+      }
 
     construirUrlAvatar(avatar: string): string {
       switch (avatar) {

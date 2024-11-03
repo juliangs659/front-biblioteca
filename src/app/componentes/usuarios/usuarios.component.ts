@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../clases/usuario';
 import { UsuarioService } from '../../servicios/usuario.service';
-import { FormsModule } from '@angular/forms'; // Agrega esto
-import { NgFor } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Agrega esto
+import { NgFor, NgIf } from '@angular/common';
 
 
 
 @Component({
   selector: 'app-usuarios',
   standalone: true,
-  imports: [FormsModule, NgFor],
+  imports: [FormsModule, NgFor, ReactiveFormsModule, NgIf],
   templateUrl: './usuarios.component.html',
   styleUrl: './usuarios.component.css'
 })
@@ -18,6 +18,10 @@ export class UsuariosComponent implements OnInit {
   usuario: Usuario[] = [];
   filteredUsuarios: Usuario[] = [];
   searchTerm: string = '';
+  usuarioParaVer: Usuario | null = null;
+  usuarioSeleccionado: Usuario | null = null;
+
+
 
   constructor(private usuarioService: UsuarioService) { }
 
@@ -62,4 +66,40 @@ export class UsuariosComponent implements OnInit {
       user.email.toLowerCase().includes(this.searchTerm.toLowerCase()) // Comparar en minúsculas
     );
   } 
+
+  verUsuario(usuario: Usuario) {
+    this.usuarioParaVer = usuario;
+  }
+
+  editarUsuario(usuario: Usuario) {
+    // Lógica para editar el usuario
+    this.usuarioSeleccionado = { ...usuario };
+    console.log('Editar usuario:', usuario);
+  }
+
+  guardarUsuario() {
+    if (this.usuarioSeleccionado) {
+      this.usuarioService.updateUsuario(this.usuarioSeleccionado.idUsuario, this.usuarioSeleccionado).subscribe(() => {
+        console.log('Usuario actualizado:', this.usuarioSeleccionado);
+        this.listaUsuarios(); // Actualiza la lista de usuarios
+        this.usuarioSeleccionado = null; // Limpiar el formulario
+      }, error => {
+        console.error('Error al actualizar el usuario:', error);
+      });
+    }
+  }
+
+  cancelarEdicion() {
+    this.usuarioSeleccionado = null; // Limpiar el formulario
+  }
+
+  eliminarUsuario(usuario: Usuario) {
+    this.usuarioService.deleteUsuario(usuario.idUsuario).subscribe(() => {
+      console.log('Usuario eliminado:', usuario);
+      this.usuario = this.usuario.filter(u => u.idUsuario !== usuario.idUsuario);
+      this.searchUsuarios(); // Actualiza la lista filtrada
+    }, error => {
+      console.error('Error al eliminar el usuario:', error);
+    });
+  }
 }

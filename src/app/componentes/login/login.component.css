@@ -1,4 +1,3 @@
-
 .container {
   margin-top: 5rem;
 }
@@ -26,4 +25,8 @@
 
 .alert {
   margin-top: 20px;
+}
+
+.dropdown {
+  text-align: center;
 }
