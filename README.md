@@ -2,7 +2,19 @@
 
 # Biblioteca FrontEnd Angular
 
-Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) versión 18.2.9.
+Este proyecto es una aplicación de biblioteca digital desarrollada con [Angular CLI](https://github.com/angular/angular-cli) versión 18.2.9.
+
+## Tabla de Contenidos
+
+- [Servidor de Desarrollo](#servidor-de-desarrollo)
+- [Generación de Código](#generación-de-código)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Dependencias](#dependencias)
+- [Construcción](#construcción)
+- [Ejecución de Pruebas](#ejecución-de-pruebas)
+- [Despliegue](#despliegue)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
 
 ## Servidor de Desarrollo
 
