@@ -5,6 +5,8 @@ import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { LibrosComponent } from './componentes/libros/libros.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { MiCuentaComponent } from './componentes/mi-cuenta/mi-cuenta.component';
+import { SubirLibroComponent } from './componentes/subir-libro/subir-libro.component';
 
 export const routes: Routes = [
     {path: "", component: HomeComponent},
@@ -13,6 +15,8 @@ export const routes: Routes = [
     {path:"usuarios", component: UsuariosComponent},
     {path:"registro", component: RegistroComponent},
     {path:"login", component: LoginComponent},
-    {path:"leer/:idLibro", component: SingleBookComponent}
+    {path:"leer/:idLibro", component: SingleBookComponent},
+    {path: "mi-cuenta", component: MiCuentaComponent},
+    {path: 'subir-libro', component: SubirLibroComponent}
 
 ];

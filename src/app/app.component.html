@@ -31,7 +31,8 @@
               <span>{{ currentUser.username }}</span>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Mi Cuenta</a></li>
+              <li><a class="dropdown-item" routerLink="/mi-cuenta">Mi Cuenta</a></li>
+              <li><a class="dropdown-item" routerLink="/subir-libro">Subir Libro</a></li>
               <li><a class="dropdown-item" href="#" (click)="logout()">Cerrar Sesión</a></li>
             </ul>
           </li>

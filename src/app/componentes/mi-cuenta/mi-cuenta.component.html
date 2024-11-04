@@ -1,0 +1,37 @@
+<div class="container mt-5" *ngIf="currentUser">
+  <h2>Mi Cuenta</h2>
+  
+  <div *ngIf="!editMode">
+    <p><strong>Nombre:</strong> {{ currentUser.nombre }}</p>
+    <p><strong>Username:</strong> {{ currentUser.username }}</p>
+    <p><strong>Email:</strong> {{ currentUser.email }}</p>
+    <p><strong>Rol:</strong> {{ currentUser.rol }}</p>
+    <p><strong>Avatar:</strong> <img [src]="construirUrlAvatar(currentUser.avatar)" alt="Avatar" class="avatar"></p>
+    <button class="btn btn-primary" (click)="toggleEditMode()">Editar</button>
+  </div>
+
+  <form *ngIf="editMode" (ngSubmit)="actualizarUsuario()">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" id="nombre" [(ngModel)]="currentUser.nombre" name="nombre" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" id="username" [(ngModel)]="currentUser.username" name="username" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" id="email" [(ngModel)]="currentUser.email" name="email" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="rol" class="form-label">Rol</label>
+      <input type="text" id="rol" [(ngModel)]="currentUser.rol" name="rol" class="form-control" [disabled]="currentUser.rol !== 'ADMIN'">
+    </div>
+    <div class="mb-3">
+      <label for="avatar" class="form-label">Avatar</label>
+      <input type="text" id="avatar" [(ngModel)]="currentUser.avatar" name="avatar" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="button" class="btn btn-secondary" (click)="toggleEditMode()">Cancelar</button>
+  </form>
+</div>

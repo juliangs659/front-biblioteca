@@ -70,4 +70,8 @@ export class LibrosService {
   getLibroById(id: string): Observable<Libro> {
     return this.http.get<Libro>(`${this.apiUrl}/${id}`);
   }
+  
+  subirLibro(libroData: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, libroData);
+  }
 }

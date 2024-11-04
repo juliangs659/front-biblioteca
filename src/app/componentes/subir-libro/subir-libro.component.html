@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <h2>Subir Libro</h2>
+  <form (ngSubmit)="subirLibro()">
+    <div class="mb-3">
+      <label for="titulo" class="form-label">Título</label>
+      <input type="text" id="titulo" [(ngModel)]="libro.titulo" name="titulo" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="referenciaPdf" class="form-label">Referencia PDF</label>
+      <input type="text" id="referenciaPdf" [(ngModel)]="libro.referenciaPdf" name="referenciaPdf" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="nombreCategoria" class="form-label">Nombre de la Categoría</label>
+      <input type="text" id="nombreCategoria" [(ngModel)]="categoria.nombreCategoria" name="nombreCategoria" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="descripcion" class="form-label">Descripción de la Categoría</label>
+      <input type="text" id="descripcion" [(ngModel)]="categoria.descripcion" name="descripcion" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="nombreAutor" class="form-label">Nombre del Autor</label>
+      <input type="text" id="nombreAutor" [(ngModel)]="autor.nombreAutor" name="nombreAutor" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Subir Libro</button>
+  </form>
+</div>

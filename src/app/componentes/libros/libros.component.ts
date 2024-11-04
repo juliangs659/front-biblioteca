@@ -58,6 +58,23 @@ export class LibrosComponent implements OnInit {
     });
   }
 
+  searchByText(): void {
+    this.filteredLibros = this.Libros.filter(libro =>
+      libro.titulo.toLowerCase().includes(this.searchText.toLowerCase()) ||
+      libro.autor.nombreAutor.toLowerCase().includes(this.searchText.toLowerCase())
+    );
+  }
+
+  searchByCategory(): void {
+    if (this.selectedCategory) {
+      this.filteredLibros = this.Libros.filter(libro =>
+        libro.categoria.nombreCategoria === this.selectedCategory
+      );
+    } else {
+      this.filteredLibros = this.Libros;
+    }
+  }
+
   onCategoryChange(category: string) {
     this.selectedCategory = category;
     this.searchBooks(); // Filtra cada vez que cambie la categoría
@@ -145,4 +162,6 @@ export class LibrosComponent implements OnInit {
 
     return images[categoria]; // Imagen por defecto
   }
+
+
 }
