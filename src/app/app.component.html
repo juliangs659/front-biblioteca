@@ -17,7 +17,7 @@
             <a class="nav-link active" aria-current="page" routerLink="/"><i class="fas fa-house"></i> <span>Inicio</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/libros"><i class="fa-solid fa-laptop"></i> <span>Libros</span></a>
+            <a class="nav-link" routerLink="/libros"><i class="fa-solid fa-book"></i> <span>Libros</span></a>
           </li>
           <li class="nav-item" *ngIf="!currentUser">
             <a class="nav-link" routerLink="/registro"><i class="fa-solid fa-user"></i> <span>Registro</span></a>
@@ -38,6 +38,9 @@
           </li>
           <li class="nav-item" *ngIf="currentUser?.rol === 'ADMIN'">
             <a class="nav-link" routerLink="/usuarios"><i class="fa-solid fa-user"></i> <span>USERS</span></a>
+          </li>
+          <li class="nav-item" *ngIf="currentUser?.rol === 'ADMIN'">
+            <a class="nav-link" routerLink="/lista-libros"><i class="fa-solid fa-book "></i> <span>LIBROS</span></a>
           </li>
         </ul>
       </div>

@@ -7,6 +7,7 @@ import { LibrosComponent } from './componentes/libros/libros.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { MiCuentaComponent } from './componentes/mi-cuenta/mi-cuenta.component';
 import { SubirLibroComponent } from './componentes/subir-libro/subir-libro.component';
+import { ListaLibrosComponent } from './componentes/lista-libros/lista-libros.component';
 
 export const routes: Routes = [
     {path: "", component: HomeComponent},
@@ -17,6 +18,7 @@ export const routes: Routes = [
     {path:"login", component: LoginComponent},
     {path:"leer/:idLibro", component: SingleBookComponent},
     {path: "mi-cuenta", component: MiCuentaComponent},
-    {path: 'subir-libro', component: SubirLibroComponent}
+    {path: 'subir-libro', component: SubirLibroComponent},
+    {path: 'lista-libros', component: ListaLibrosComponent}
 
 ];
