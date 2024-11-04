@@ -11,8 +11,6 @@ Este proyecto es una aplicación de biblioteca digital desarrollada con [Angular
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Dependencias](#dependencias)
 - [Construcción](#construcción)
-- [Ejecución de Pruebas](#ejecución-de-pruebas)
-- [Despliegue](#despliegue)
 - [Contribución](#contribución)
 - [Licencia](#licencia)
 
@@ -39,6 +37,40 @@ También puedes usar:
 ```bash
 ng generate directive|pipe|service|class|guard|interface|enum|module
 ```
+## Estructura del Proyecto
+
+La estructura principal del proyecto es la siguiente:
+
+```markdown
+src/
+├── app/
+│   ├── componentes/
+│   │   ├── home/
+│   │   ├── login/
+│   │   ├── mi-cuenta/
+│   │   ├── registro/
+│   │   ├── subir-libro/
+│   │   └��─ usuarios/
+│   ├── modelos/
+│   ├── servicios/
+│   ├── app-routing.module.ts
+│   ├── app.component.css
+│   ├── app.component.html
+│   ├── app.component.ts
+│   └── app.module.ts
+├── assets/
+├── environments/
+├── index.html
+├── main.ts
+└── styles.css
+```
+## Dependencias
+
+Para instalar las dependencias del proyecto, ejecuta:
+
+```bash
+npm install
+```
 
 ## Construcción
 
@@ -47,37 +79,14 @@ Para construir el proyecto, ejecuta:
 ```bash
 ng build
 ```
+## Contribución
+Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
 
-Los artefactos de construcción se almacenarán en el directorio `dist/`.
-
-## Ejecución de Pruebas Unitarias
-
-Para ejecutar las pruebas unitarias a través de [Karma](https://karma-runner.github.io), ejecuta:
-
-```bash
-ng test
-```
-
-## Ejecución de Pruebas de Extremo a Extremo
-
-Para ejecutar las pruebas de extremo a extremo a través de una plataforma de tu elección, ejecuta:
-
-```bash
-ng e2e
-```
-
-Nota: Para usar este comando, primero necesitas agregar un paquete que implemente capacidades de pruebas de extremo a extremo.
-
-## Ayuda Adicional
-
-Para más ayuda sobre Angular CLI, usa:
-
-```bash
-ng help
-```
-
-O visita la página de [Visión General y Referencia de Comandos de Angular CLI](https://angular.dev/tools/cli).
-
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
+3. Realiza tus cambios y haz commit (git commit -am 'Agrega nueva funcionalidad').
+4. Haz push a la rama (git push origin feature/nueva-funcionalidad).
+5. Abre un Pull Request.
 ## Recursos Adicionales
 
 - [Documentación de Angular](https://angular.io/docs)
