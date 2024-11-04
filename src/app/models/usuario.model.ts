@@ -5,6 +5,6 @@ export interface Usuario {
   email: string;
   pass: string; // Si no necesitas la contraseña en el frontend, puedes omitirla
   avatar: string; // Cambia esto si Avatar es de un tipo diferente
-  fecha_creacion: string; // O Date si prefieres
+  fecha_creacion: string; 
   rol: string; // Ajusta según tu implementación
 }

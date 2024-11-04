@@ -69,7 +69,6 @@ export class HomeComponent implements OnInit {
       }
     });
     this.categorias = Array.from(categoriasSet);
-    console.log(categoriasSet)
   }
 
   // Método para filtrar libros por categorías seleccionadas

@@ -32,6 +32,10 @@
     background-color: #242020;
 }
 
+.content-info-left .content {
+  text-align: left;
+}
+
 /*modificando el contenido general de la derecha*/
 .content-info-right a img{
     width: 60%;
@@ -50,6 +54,16 @@
 
 .content-info-right{
    text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.fixed-size-img {
+  width: 300px; /* Ancho fijo */
+  height: 400px; /* Altura fija */
+  object-fit: cover; /* Ajustar la imagen al contenedor */
+  border-radius: 10px; /* Bordes redondeados */
 }
 
 /* modificando los botones del carousel*/
@@ -61,7 +75,17 @@
 }
 
 .carousel-control-prev, .carousel-control-next{
-    width: 6%;
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000; /* Color de fondo de los iconos */
+  border-radius: 50%; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  position: absolute;
+    top: 50%; /* Alinea al centro vertical */
+    
 }
 
 /*estilos del filtro*/
@@ -267,5 +291,65 @@
     background-color: transparent;
 }
 .Head-Card {
-    background-color: #E4E4E4;
+  background-color: #f8f9fa; /* Color de fondo */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.bienvenida {
+  background-color: #f8f9fa; /* Color de fondo claro */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin-bottom: 30px; /* Espaciado inferior */
+  text-align: center; /* Centrar el texto */
+  transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+.bienvenida:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+}
+
+.bienvenida-titulo {
+  font-size: 2.5rem; /* Tamaño de fuente grande */
+  font-weight: bold; /* Texto en negrita */
+  color: #343a40; /* Color del texto */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.bienvenida-texto {
+  font-size: 1.2rem; /* Tamaño de fuente mediano */
+  color: #6c757d; /* Color del texto */
+  margin-bottom: 0; /* Eliminar espaciado inferior */
+}
+
+.content-info-left .content {
+  text-align: left;
+}
+
+.content-info-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixed-size-img {
+  width: 300px; /* Ancho fijo */
+  height: 400px; /* Altura fija */
+  object-fit: cover; /* Ajustar la imagen al contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Ajusta el ancho de los controles */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000; /* Color de fondo de los iconos */
+  border-radius: 50%; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
 }

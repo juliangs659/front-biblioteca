@@ -6,6 +6,10 @@
     <title>Home Biblioteca Digital</title>
 </head>
 <body>
+  <div class="container mt-4 text-center bienvenida">
+    <h1 class="bienvenida-titulo">Bienvenido a la Biblioteca Digital Comunitaria</h1>
+    <p class="bienvenida-texto">Explora una vasta colección de libros y recursos digitales.</p>
+  </div>
  <!-- HEADER -->
 <div id="carouselExample" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -21,14 +25,36 @@
           </div>
           <div class="col-12 col-sm-6 p-4 content-info-right">
             <a href="#" class="img-right-header">
-              <img [src]="getCategoryImage(libroAleatorio.categoria.nombreCategoria)" alt="Imagen del libro {{ libroAleatorio.titulo }}" />
+              <img [src]="getCategoryImage(libroAleatorio.categoria.nombreCategoria)" alt="Imagen del libro {{ libroAleatorio.titulo }}" class="img-fluid fixed-size-img" />
             </a>
           </div>
         </div>
       </div>
     </div>
+    <div class="carousel-item" *ngFor="let i of [1, 2]">
+      <div class="row">
+        <div class="col-md-3" *ngFor="let libro of shuffledLibros.slice(i * 4, (i + 1) * 4)">
+          <div class="card h-100 custom-card">
+            <img [src]="getCategoryImage(libro.categoria.nombreCategoria)" class="card-img-top" alt="Libro {{ libro.titulo }}" style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">{{ libro.titulo }}</h5>
+              <p class="card-text">Por: {{ libro.autor.nombreAutor }}</p>
+              <p class="card-text">Categoría: {{ libro.categoria.nombreCategoria }}</p>
+              <a [routerLink]="['/leer', libro.idLibro]" class="btn btn-primary mt-auto" target="_blank">Ver PDF</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  
+ <!--  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button> -->
 </div>
 <!-- HEADER -->
 

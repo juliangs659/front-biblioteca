@@ -55,3 +55,21 @@ footer .subtitulo-footer{
     border-radius: 50%;
     margin-right: 10px;
 }
+.bienvenida {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-bottom: 10px;
+  }
+  
+  .bienvenida-titulo {
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    font-weight: bold; /* Texto en negrita */
+    color: #343a40; /* Color del texto */
+  }
+  
+  .bienvenida-texto {
+    font-size: 1.2rem; /* Tamaño de fuente mediano */
+    color: #6c757d; /* Color del texto */
+  }
